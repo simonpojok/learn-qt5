@@ -1,35 +1,26 @@
+#include <QString>
 #include <QtTest>
 
-// add necessary includes here
-
-class testcase1 : public QObject
+class ClientTests : public QObject
 {
-    Q_OBJECT
+        Q_OBJECT
 
 public:
-    testcase1();
-    ~testcase1();
+        ClientTests();
 
-private slots:
-    void test_case1();
-
+private Q_SLOTS:
+        void testCase1();
 };
 
-testcase1::testcase1()
+ClientTests::ClientTests()
 {
-
 }
 
-testcase1::~testcase1()
+void ClientTests::testCase1()
 {
-
+        QVERIFY2(true, "Failure");
 }
 
-void testcase1::test_case1()
-{
+QTEST_APPLESS_MAIN(ClientTests)
 
-}
-
-QTEST_APPLESS_MAIN(testcase1)
-
-#include "tst_testcase1.moc"
+#include "client-tests.moc"
