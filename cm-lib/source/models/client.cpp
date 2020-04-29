@@ -1,5 +1,9 @@
 #include "client.h"
 
-Client::Client()
-{
+namespace cm {
+    namespace  models {
+        Client::Client() {
+
+        }
+    }
 }
